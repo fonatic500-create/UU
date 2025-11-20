@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Таблиці за допомогою CSS — Приклад</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Таблиці за допомогою CSS</h1>
+    <p class="lead">Демонстрація можливостей оформлення таблиць: полосаті ряди, підсвітка при наведенні, липкий заголовок, адаптивність та інше.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>1. Проста стилізована таблиця</h2>
+      <table class="table table--fancy" summary="Приклад таблиці з даними">
+        <caption>Рейтинги курсів</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Курс</th>
+            <th scope="col">Кількість годин</th>
+            <th scope="col">Оцінка</th>
+            <th scope="col">Статус</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td><td>HTML &amp; CSS</td><td>48</td><td>9.5</td><td>Завершено</td>
+          </tr>
+          <tr>
+            <td>2</td><td>JavaScript</td><td>56</td><td>8.8</td><td>В процесі</td>
+          </tr>
+          <tr>
+            <td>3</td><td>Веб-дизайн</td><td>32</td><td>9.1</td><td>Завершено</td>
+          </tr>
+          <tr>
+            <td>4</td><td>Основи ОС</td><td>40</td><td>8.0</td><td>Не розпочато</td>
+          </tr>
+          <tr>
+            <td>5</td><td>Бази даних</td><td>44</td><td>8.7</td><td>В процесі</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5">Джерело: навчальна програма</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>2. Таблиця зі "sticky" заголовком та горизонтальним скролом</h2>
+      <div class="table-wrap">
+        <table class="table table--wide" aria-label="Таблиця з великим числом колонок">
+          <thead>
+            <tr>
+              <th>ID</th><th>Назва</th><th>Сектор</th><th>Країна</th><th>Рік</th><th>Час</th><th>Статус</th><th>Примітки</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>101</td><td>Проєкт A</td><td>IT</td><td>Україна</td><td>2024</td><td>120h</td><td>Активний</td><td>Без зауважень</td></tr>
+            <tr><td>102</td><td>Проєкт B</td><td>Маркетинг</td><td>Польща</td><td>2023</td><td>90h</td><td>Завершено</td><td>Оновлення в плані</td></tr>
+            <tr><td>103</td><td>Проєкт C</td><td>Наука</td><td>Німеччина</td><td>2025</td><td>200h</td><td>Планується</td><td>Очікується фінансування</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. Таблиця з псевдо-елементами і підказкою</h2>
+      <table class="table table--compact" aria-describedby="hint">
+        <caption id="hint">Таблиця контактів</caption>
+        <thead>
+          <tr><th>Ім'я</th><th>Пошта</th><th>Телефон</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Ім'я">Олена</td><td data-label="Пошта">olena@example.com</td><td data-label="Телефон">+380501234567</td></tr>
+          <tr><td data-label="Ім'я">Ігор</td><td data-label="Пошта">igor@example.com</td><td data-label="Телефон">+380671112233</td></tr>
+          <tr><td data-label="Ім'я">Марія</td><td data-label="Пошта">maria@example.com</td><td data-label="Телефон">+380631998877</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer class="card footer-card">
+      <p>Гарного дня Вам!!!.</p>
+    </footer>
+  </main>
+</body>
+</html>
