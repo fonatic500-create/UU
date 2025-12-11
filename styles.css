@@ -1,46 +1,38 @@
-/* ---------------------------------- */
 /* 1. CSS-ЗМІННІ ТА КОЛЬОРИ (СУЧАСНИЙ ПІДХІД) */
-/* ---------------------------------- */
 :root {
     /* Кольорова палітра */
     --accent-color: #5d5dff; /* Насичений фіолетово-синій */
     --accent-dark: #3a3ad0;
-    --text-primary: #1f2937; /* Майже чорний, але м'якший */
+    --text-primary: #1f2937;
     --text-secondary: #4b5563;
+    
+    /* Новий градієнт для фону */
+    --background-start: #eef2f3; /* Світло-сірий */
+    --background-end: #f9fafb; /* Майже білий */
+    
     --background-card: #ffffff; /* Чистий білий для карток */
-    --border-color: #e5e7eb; 
-
-    /* Нові кольори для градієнтного фону */
-    --gradient-start: #e0e7ff; /* Дуже світлий блакитний */
-    --gradient-end: #f0f4f8;   /* Світлий сіро-блакитний */
+    --border-color: #e5e7eb;
     
     /* Типографіка */
     --main-font: 'Inter', sans-serif;
     
-    /* Тіні для сучасного вигляду */
+    /* Тіні */
     --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
 }
-
-/* ---------------------------------- */
 /* 2. БАЗОВІ СТИЛІ ТА ТИПОГРАФІКА */
-/* ---------------------------------- */
-html {
-    scroll-behavior: smooth;
-}
-
+/* ... інші стилі ... */
 body {
     font-family: var(--main-font);
     margin: 0;
     padding: 0;
-    /* --- ОНОВЛЕНИЙ ГРАДІЄНТНИЙ ФОН --- */
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-    /* Це гарантує, що градієнт покриває всю висоту сторінки */
-    background-attachment: fixed; 
-    /* --------------------------------- */
+    /* ЗАМІНА: Додаємо плавний градієнт на задній фон */
+    background: linear-gradient(180deg, var(--background-start) 0%, var(--background-end) 100%);
+    background-attachment: fixed; /* Фіксуємо фон, щоб він не прокручувався */
     color: var(--text-primary);
     line-height: 1.65;
 }
+/* ... інші стилі ... */
 
 
 h1, h2, h3, h4 {
