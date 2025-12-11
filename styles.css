@@ -34,9 +34,10 @@ body {
    3. HEADER
 -------------------------------------------------------*/
 header {
+    background: linear-gradient(135deg, #fdfbff 0%, #e9e7ff 50%, #d6e4ff 100%);
+    color: #333;
+    padding: 55px 20px;
     text-align: center;
-    padding: 50px 20px;
-    background: var(--bg-card);
     box-shadow: var(--shadow-sm);
 }
 
