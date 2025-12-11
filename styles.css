@@ -1,28 +1,52 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+:root {
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --secondary-color: #333;
+    --background-light: #f4f4f9;
+    --background-white: white;
+    --border-color: #ddd;
+    
+    --main-font: 'Arial', sans-serif;
+    
+    --main-padding: 20px;
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    padding: var(--main-padding);
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0 0 5px 0;
+    font-size: 2em;
+}
+
+.student-info {
+    margin: 0;
+    font-size: 1em;
+    opacity: 0.9;
 }
 
 
 nav {
-    background-color: #333;
+    background-color: var(--secondary-color);
     padding: 10px 0;
     text-align: center;
 }
@@ -35,83 +59,111 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: var(--background-white);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+    color: var(--background-white);
+    background-color: var(--primary-dark);
 }
 
 
 main {
-    width: 80%;
+    max-width: 1000px;
+    width: 90%;
     margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: var(--main-padding);
+    background-color: var(--background-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 
 section {
     margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed #ccc;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 section:last-child {
     border-bottom: none;
+    margin-bottom: 0;
 }
 
 h2 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 8px;
     margin-top: 0;
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+.download-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: bold;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-    color: #333;
-}
-
-
-.lab-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 15px 0;
-    border: 1px solid #ddd;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+.download-link:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #333;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--background-white);
     font-size: 0.9em;
+    margin-top: 30px;
+}
+
+
+@media (max-width: 768px) {
+    
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 8px;
+    }
+
+    main {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .download-link {
+        display: block; /* Посилання на весь рядок */
+        text-align: center;
+    }
 }
