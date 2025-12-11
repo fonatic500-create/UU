@@ -7,18 +7,20 @@
     --accent-dark: #3a3ad0;
     --text-primary: #1f2937; /* Майже чорний, але м'якший */
     --text-secondary: #4b5563;
-    --background-light: #f9fafb; /* Дуже світле тло */
     --background-card: #ffffff; /* Чистий білий для карток */
-    --border-color: #e5e7eb; /* Світла межа */
+    --border-color: #e5e7eb; 
+
+    /* Нові кольори для градієнтного фону */
+    --gradient-start: #e0e7ff; /* Дуже світлий блакитний */
+    --gradient-end: #f0f4f8;   /* Світлий сіро-блакитний */
     
     /* Типографіка */
     --main-font: 'Inter', sans-serif;
     
-    /* Тіні для сучасного вигляду (легкий Neumorphism) */
+    /* Тіні для сучасного вигляду */
     --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
 }
-
 
 /* ---------------------------------- */
 /* 2. БАЗОВІ СТИЛІ ТА ТИПОГРАФІКА */
@@ -31,10 +33,15 @@ body {
     font-family: var(--main-font);
     margin: 0;
     padding: 0;
-    background-color: var(--background-light);
+    /* --- ОНОВЛЕНИЙ ГРАДІЄНТНИЙ ФОН --- */
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    /* Це гарантує, що градієнт покриває всю висоту сторінки */
+    background-attachment: fixed; 
+    /* --------------------------------- */
     color: var(--text-primary);
     line-height: 1.65;
 }
+
 
 h1, h2, h3, h4 {
     font-weight: 700;
