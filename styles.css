@@ -34,11 +34,11 @@ body {
    3. HEADER
 -------------------------------------------------------*/
 header {
-    background: linear-gradient(135deg, #fdfbff 0%, #e9e7ff 50%, #d6e4ff 100%);
-    color: #333;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    color: white;
     padding: 55px 20px;
     text-align: center;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
 }
 
 header h1 {
