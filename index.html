@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Виконані роботи | Веб-дизайн</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Виконані роботи. Веб-дизайн</h1>
-        <p class="student-info">Студент: **Нечай Владислав** | Група: КІ-24.2-1фмб_ict</p>
+        <div class="header-content">
+            <h1>Звіт з веб-дизайну</h1>
+            <p class="student-info">Студент: **Нечай Владислав** | Група: КІ-24.2-1фмб_ict</p>
+        </div>
     </header>
 
-    <nav>
+    <nav class="sticky-nav">
         <ul>
-            <li><a href="#meta-data">Мета роботи</a></li>
+            <li><a href="#meta-data">Мета</a></li>
             <li><a href="#tema-6">Тема 6</a></li>
             <li><a href="#tema-7">Тема 7</a></li>
             <li><a href="#tema-8">Тема 8</a></li>
@@ -30,73 +33,70 @@
 
     <main>
         
-        <section id="meta-data">
+        <section id="meta-data" class="content-card meta-card">
             <h2>1. Мета роботи</h2>
             <p>Опанувати основні HTML-теги для структуризації веб-сторінки та навчитися базового стилізування за допомогою CSS.</p>
         </section>
+        
+        <div class="lab-grid">
+            
+            <section id="tema-6" class="lab-card">
+                <h3>Тема 6</h3>
+                <h4>Таблиці за допомогою CSS</h4>
+                <a href="Тема 6.zip" download class="download-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Завантажити ZIP
+                </a>
+            </section>
 
-        <section id="tema-6" class="lab-item">
-            <h2>Тема 6: Таблиці за допомогою CSS</h2>
-            <a href="Тема 6.zip" download class="download-link">
-                Завантажити Тема 6.zip
-            </a>
-        </section>
+            <section id="tema-7" class="lab-card">
+                <h3>Тема 7</h3>
+                <h4>Заголовки. Робота з текстом</h4>
+                <a href="Тема 7.zip" download class="download-link">Завантажити ZIP</a>
+            </section>
 
-        <section id="tema-7" class="lab-item">
-            <h2>Тема 7: Заголовки. Робота з великими обсягами тексту</h2>
-            <a href="Тема 7.zip" download class="download-link">
-                Завантажити Тема 7.zip
-            </a>
-        </section>
+            <section id="tema-8" class="lab-card">
+                <h3>Тема 8</h3>
+                <h4>Посилання та кнопки (CSS)</h4>
+                <a href="Тема 8.zip" download class="download-link">Завантажити ZIP</a>
+            </section>
 
-        <section id="tema-8" class="lab-item">
-            <h2>Тема 8: Посилання та кнопки за допомогою CSS</h2>
-            <a href="Тема 8.zip" download class="download-link">
-                Завантажити Тема 8.zip
-            </a>
-        </section>
+            <section id="tema-9" class="lab-card">
+                <h3>Тема 9</h3>
+                <h4>Форми</h4>
+                <a href="Тема 9.zip" download class="download-link">Завантажити ZIP</a>
+            </section>
 
-        <section id="tema-9" class="lab-item">
-            <h2>Тема 9: Форми</h2>
-            <a href="Тема 9.zip" download class="download-link">
-                Завантажити Тема 9.zip
-            </a>
-        </section>
+            <section id="tema-10" class="lab-card">
+                <h3>Тема 10</h3>
+                <h4>Анімація (CSS animation)</h4>
+                <a href="Тема 10.zip" download class="download-link">Завантажити ZIP</a>
+            </section>
 
-        <section id="tema-10" class="lab-item">
-            <h2>Тема 10: Анімація (marquee та CSS animation)</h2>
-            <a href="Тема 10.zip" download class="download-link">
-                Завантажити Тема 10.zip
-            </a>
-        </section>
+            <section id="tema-11" class="lab-card">
+                <h3>Тема 11</h3>
+                <h4>Використання блоків (Flexbox/Grid)</h4>
+                <a href="Тема 11.zip" download class="download-link">Завантажити ZIP</a>
+            </section>
 
-        <section id="tema-11" class="lab-item">
-            <h2>Тема 11: Використання блоків у CSS</h2>
-            <a href="Тема 11.zip" download class="download-link">
-                Завантажити Тема 11.zip
-            </a>
-        </section>
+            <section id="tema-12" class="lab-card">
+                <h3>Тема 12</h3>
+                <h4>Структура сайту</h4>
+                <a href="Тема 12.zip" download class="download-link">Завантажити ZIP</a>
+            </section>
 
-        <section id="tema-12" class="lab-item">
-            <h2>Тема 12: Структура сайту</h2>
-            <a href="Тема 12.zip" download class="download-link">
-                Завантажити Тема 12.zip
-            </a>
-        </section>
+            <section id="tema-13" class="lab-card">
+                <h3>Тема 13</h3>
+                <h4>Мультимедіа в HTML5</h4>
+                <a href="Тема 13.zip" download class="download-link">Завантажити ZIP</a>
+            </section>
 
-        <section id="tema-13" class="lab-item">
-            <h2>Тема 13: Мультимедіа в HTML5</h2>
-            <a href="Тема 13.zip" download class="download-link">
-                Завантажити Тема 13.zip
-            </a>
-        </section>
-
-        <section id="tema-14" class="lab-item">
-            <h2>Тема 14: Адаптивний дизайн</h2>
-            <a href="Тема 14.zip" download class="download-link">
-                Завантажити Тема 14.zip
-            </a>
-        </section>
+            <section id="tema-14" class="lab-card">
+                <h3>Тема 14</h3>
+                <h4>Адаптивний дизайн</h4>
+                <a href="Тема 14.zip" download class="download-link">Завантажити ZIP</a>
+            </section>
+        </div>
         
     </main>
 
