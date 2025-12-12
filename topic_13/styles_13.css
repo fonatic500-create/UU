@@ -1,0 +1,140 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f7ff;
+    color: #1a1a2e;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #ff007f;
+    border-bottom: 2px solid #ffe81a;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+
+.video-background-container {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.video-content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video-content-overlay h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.media-item {
+    flex: 1 1 calc(50% - 15px);
+    min-width: 300px;
+}
+
+.audio-player {
+    width: 100%;
+}
+
+
+figure {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+img[usemap] {
+    border-radius: 6px;
+    display: block;
+}
+
+
+.canvas-box {
+    border: 3px dashed #007bff;
+    border-radius: 6px;
+    display: block;
+}
+
+.svg-box {
+    border: 3px solid #ff3e67;
+    border-radius: 6px;
+    display: block;
+}
+
+button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .media-item {
+        flex: 1 1 100%;
+    }
+    
+    .video-content-overlay h1 {
+        font-size: 2em;
+    }
+}

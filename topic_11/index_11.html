@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вкладення Блоків та Центрування</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Приклади Вкладених Блоків (Nesting Demos)</h1>
+    </header>
+
+    <main>
+        
+        <section class="example-section">
+            <h2>1. Просте Вкладення з Двома Рівнями</h2>
+            
+            <div class="block outer-block-1">
+                <p>Зовнішній Блок 1</p>
+                
+                <div class="block inner-block-1">
+                    <p>Внутрішній Блок 1.1</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="example-section">
+            <h2>2. Багаторівневе Вкладення (Імітація Картки)</h2>
+            
+            <div class="block outer-block-2">
+                <p>Блок-Контейнер (Рівень 1)</p>
+                
+                <div class="block middle-block-2">
+                    <p>Блок Вмісту (Рівень 2)</p>
+                    
+                    <div class="block inner-block-2">
+                        <p>Блок-Акцент (Рівень 3)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="example-section">
+            <h2>3. Вкладення з ефектом наведення</h2>
+            
+            <div class="block outer-block-3">
+                <p>Блок-Контейнер. Наведіть курсор на внутрішній блок!</p>
+                
+                <div class="block inner-block-3">
+                    <p>Внутрішній Блок 3.1</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Демонстрація вкладених &lt;div&gt; та Flexbox-центрування.</p>
+    </footer>
+
+</body>
+</html>

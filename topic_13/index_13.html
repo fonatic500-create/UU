@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мультимедіа та Графіка в HTML5</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <div class="video-background-container">
+        <video autoplay loop muted playsinline id="background-video">
+            <source src="placeholder-background-video.mp4" type="video/mp4">
+            Ваш браузер не підтримує тег video.
+        </video>
+        <div class="video-content-overlay">
+            <h1>HTML5 Multimedia Showcase</h1>
+            <p>Цей заголовок знаходиться поверх фонового відео.</p>
+        </div>
+    </div>
+    
+    <main>
+        
+        <section>
+            <h2>2. Власне Відео та Аудіо (Теги &lt;video&gt; та &lt;audio&gt;)</h2>
+            
+            <div class="media-container">
+                <div class="media-item">
+                    <h3>2.1. Відеоелемент</h3>
+                    <video controls width="100%" poster="placeholder-poster.jpg">
+                        <source src="sample-5s.mp4" type="video/mp4">
+                        <source src="placeholder-video.webm" type="video/webm">
+                        Ваш браузер не підтримує відео.
+                    </video>
+                </div>
+                
+                <div class="media-item">
+                    <h3>2.2. Аудіоелемент</h3>
+                    <audio controls class="audio-player">
+                         <source src="Novo-Amor-Placeholder.mp3" type="audio/mp3">
+                        Ваш браузер не підтримує аудіо.
+                    </audio>
+                    <p>Цей аудіоплеєр вбудований безпосередньо за допомогою HTML5.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Вбудовування Стороннього Контенту (&lt;iframe&gt;)</h2>
+
+            <div class="media-container">
+                <div class="media-item">
+                    <h3>3.1. Відео з YouTube (iframe)</h3>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=4Ibh36Ihb48Tn5ZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="media-item">
+                    <h3>3.2. Інтерактивна Карта (iframe)</h3>
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        title="Embedded Map"
+                        src="https://maps.google.com/maps?q=Kyiv,Ukraine&z=12&output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>4. Карта Зображень (&lt;map&gt; та &lt;area&gt;)</h2>
+            <p>Клікніть на одну з трьох областей (коло, прямокутник або полігон) на зображенні, щоб перейти за посиланням.</p>
+            
+            <figure>
+                <img src="11647873.png" usemap="#shapeMap" alt="Зображення з областями для карти" width="500" height="300">
+                
+                <map name="shapeMap">
+                    <area shape="circle" coords="100,150,50" href="https://www.google.com" alt="Коло" target="_blank">
+                    <area shape="rect" coords="250,50,450,120" href="https://uk.wikipedia.org" alt="Прямокутник" target="_blank">
+                    <area shape="poly" coords="300,200,450,250,400,290" href="https://x.com" alt="Полігон" target="_blank">
+                </map>
+                <figcaption>Схема карти зображень з інтерактивними областями.</figcaption>
+            </figure>
+             
+        </section>
+        
+        <section>
+            <h2>5. Векторна та Растрова Графіка (Canvas та SVG)</h2>
+
+            <div class="media-container">
+                <div class="media-item">
+                    <h3>5.1. Растрова Графіка (Canvas + JS)</h3>
+                    <canvas id="myCanvas" width="300" height="200" class="canvas-box"></canvas>
+                    <p>Натисніть кнопку, щоб намалювати прямокутник на Canvas:</p>
+                    <button onclick="drawOnCanvas()">Намалювати</button>
+                </div>
+                
+                <div class="media-item">
+                    <h3>5.2. Векторна Графіка (SVG)</h3>
+                    <svg width="300" height="200" class="svg-box">
+                        <circle cx="150" cy="100" r="80" stroke="#ff3e67" stroke-width="5" fill="#ffe81a" />
+                        <text x="150" y="105" font-family="Arial" font-size="20" fill="#1a1a2e" text-anchor="middle">SVG Коло</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Демонстрація Мультимедіа | HTML5 &amp; CSS3.</p>
+    </footer>
+
+    <script>
+        function drawOnCanvas() {
+            const canvas = document.getElementById('myCanvas');
+            // Перевіряємо, чи браузер підтримує Canvas
+            if (canvas.getContext) {
+                const ctx = canvas.getContext('2d');
+
+                // Малюємо прямокутник
+                ctx.fillStyle = '#007bff'; // Синій колір
+                ctx.fillRect(20, 20, 100, 75); // (x, y, ширина, висота)
+                
+                // Малюємо обведення
+                ctx.strokeStyle = '#ff5722'; // Помаранчевий колір
+                ctx.lineWidth = 4;
+                ctx.strokeRect(150, 50, 80, 100);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background-color: #5d5d5d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.animation-section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #a0c4ff;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+
+.marquee-container {
+    padding: 15px;
+    background-color: #ffe0b2;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    overflow: hidden;
+    font-weight: bold;
+    color: #e65100;
+    margin: 20px 0;
+}
+
+
+.css-animation-box {
+    background-color: #e8f5e9;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #2e7d32;
+    margin: 20px 0;
+    
+
+    position: relative
+    overflow: hidden;
+    white-space: nowrap;
+    
+   
+    animation: slide-text 10s linear infinite alternate;
+}
+
+
+@keyframes slide-text {
+   
+    0% {
+        transform: translateX(-500px); 
+    }
+    
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #5d5d5d;
+    color: white;
+    margin-top: 30px;
+}

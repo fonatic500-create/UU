@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Демонстрація Адаптивного Дизайну</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Адаптивна Галерея з Flexbox</h1>
+        <p>Зменшуйте або збільшуйте ширину вікна браузера, щоб побачити, як елементи автоматично перебудовуються.</p>
+    </header>
+
+    <main class="gallery-container">
+        
+        <div class="card">
+            <h2>Карта 1: Структура</h2>
+            <p>Flexbox допомагає нам розташувати ці картки в ряд, а коли місця стає мало, вони переходять на новий рядок.</p>
+        </div>
+
+        <div class="card featured">
+            <h2>Карта 2: Центральний елемент</h2>
+            <p>Цей елемент виділено. Він займає повну ширину рядка на мобільних пристроях і більше місця на великих екранах.</p>
+        </div>
+
+        <div class="card">
+            <h2>Карта 3: Гнучкість</h2>
+            <p>Всі картки в контейнері Flex легко керуються властивостями `justify-content` та `align-items`.</p>
+        </div>
+
+        <div class="card">
+            <h2>Карта 4: Відгук</h2>
+            <p>Адаптивність досягається за допомогою медіа-запитів (`@media`) у CSS, які змінюють властивості Flex.</p>
+        </div>
+
+        <div class="card">
+            <h2>Карта 5: Порядок</h2>
+            <p>Властивість `order` у Flexbox дозволяє змінювати візуальний порядок елементів, не змінюючи їх у HTML.</p>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>Демонстрація CSS Flexbox/</p>
+    </footer>
+
+</body>
+</html>

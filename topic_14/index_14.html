@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивний Дизайн та Розширене Форматування Тексту</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Адаптивний Веб та Семантика Тексту</h1>
+    </header>
+
+    <main>
+        
+        <section class="text-formatting-section">
+            <h2>1. Семантичні Теги для Тексту</h2>
+            
+            <article class="text-block">
+                
+                <h3>1.1. Цитати, Абревіатури та Адреси</h3>
+                
+                <p>
+                    У статті про розробку Тім Бернерс-Лі, <cite>батько Всесвітньої павутини</cite>, зазначив: 
+                    <q>Головна мета вебу — це доступність для всіх.</q> 
+                    Це коротка цитата, оформлена тегом <code>&lt;q&gt;</code>.
+                </p>
+
+                <blockquote>
+                    <p>
+                        "Принцип модульності та розділення вмісту, стилю і поведінки є фундаментальним для створення довговічних і легко підтримуваних веб-систем."
+                    </p>
+                    <footer>— З повагою, розробник</footer>
+                </blockquote>
+                
+                <p>
+                    Наш відділ <abbr title="HyperText Markup Language">HTML</abbr> та <abbr title="Cascading Style Sheets">CSS</abbr> працює над цим. 
+                    (Тег <code>&lt;abbr&gt;</code> показує повну назву при наведенні).
+                </p>
+                
+                <p>Контактна інформація організації, оформлена тегом <code>&lt;address&gt;</code>:</p>
+                <address>
+                    Київ, Україна, <br>
+                    Вулиця Програмістська, 5, <br>
+                    Індекс: 01001 <br>
+                    Електронна пошта: <a href="mailto:info@example.com">info@example.com</a>
+                </address>
+
+                <h3>1.2. Спеціалізовані Теги та Двонаправлений Текст</h3>
+                
+                <p>
+                    Цей текст є звичайною <del>неправильною ціною</del> <ins>новою ціною</ins> (видалення та вставка).
+                </p>
+                
+                <p>
+                    Для демонстрації двонаправленого тексту, ми використовуємо тег <code>&lt;bdo&gt;</code> (Bidirectional Override). Це корисно для відображення тексту, написаного справа наліво: 
+                    <bdo dir="rtl">Цей текст буде прочитано навпаки.</bdo>
+                </p>
+
+                <h3>1.3. Інтерактивність без JavaScript (&lt;details&gt; та &lt;summary&gt;)</h3>
+                
+                <p>Елементи <code>&lt;details&gt;</code> та <code>&lt;summary&gt;</code> дозволяють створювати інтерактивні блоки, що розкриваються/згортаються.</p>
+
+                <details class="interactive-details">
+                    <summary>Деталі про Адаптивність (Клікніть тут)</summary>
+                    <p>Адаптивний дизайн використовує CSS Media Queries для перевірки характеристик пристрою (наприклад, ширини вікна) і застосовує різні набори правил стилів відповідно до цих характеристик.</p>
+                    <ul>
+                        <li><bdo dir="rtl">dir="rtl"</bdo> - Ключ до успіху: мобільний підхід (Mobile-First).</li>
+                        <li>Flexbox та Grid є основними інструментами адаптивного макетування.</li>
+                    </ul>
+                </details>
+                
+                <details class="interactive-details">
+                    <summary>Навіщо потрібні семантичні теги?</summary>
+                    <p>Семантичні теги покращують **доступність** (Accessibility) та **пошукову оптимізацію** (SEO).</p>
+                </details>
+                
+            </article>
+        </section>
+
+        <section class="responsive-section">
+            <h2>2. Адаптивний Макет (Спробуйте змінити розмір вікна!)</h2>
+            
+            <div class="card-container">
+                <div class="card card-one">Карта 1: Великий Екран (25%)</div>
+                <div class="card card-two">Карта 2: Середній Екран (50%)</div>
+                <div class="card card-three">Карта 3: Малий Екран (100%)</div>
+                <div class="card card-four">Карта 4: Адаптивний Елемент</div>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Демонстрація семантичного тексту та адаптивного дизайну.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приклади HTML-Форм та Калькулятор на JavaScript</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Приклади Роботи з HTML-Формами</h1>
+        <p>Демонстрація основних елементів форм та їх інтеграція з JavaScript.</p>
+    </header>
+
+    <main>
+        
+        <section class="form-section">
+            <h2>1. Стандартні Поля Вводу</h2>
+            
+            <form action="#" method="get" class="simple-form">
+                
+                <div class="form-group">
+                    <label for="username">Ім'я користувача:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Електронна пошта (email):</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Пароль (password):</label>
+                    <input type="password" id="password" name="password" minlength="8">
+                </div>
+                
+                <button type="submit" class="submit-button">Надіслати Дані Форми</button>
+            </form>
+        </section>
+
+        <section class="form-section">
+            <h2>2. Елементи Вибору (Select, Radio, Checkbox)</h2>
+            
+            <form action="#" method="get" class="choice-form">
+                
+                <div class="form-group">
+                    <label for="course">Оберіть курс:</label>
+                    <select id="course" name="course">
+                        <option value="js">JavaScript (Основи)</option>
+                        <option value="htmlcss">HTML/CSS (Розмітка)</option>
+                        <option value="php">PHP (Серверна розробка)</option>
+                    </select>
+                </div>
+
+                <div class="form-group radio-group">
+                    <p>Бажаний час занять:</p>
+                    <label><input type="radio" name="time" value="morning" checked> Ранок</label>
+                    <label><input type="radio" name="time" value="evening"> Вечір</label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <p>Додаткові опції:</p>
+                    <label><input type="checkbox" name="option1" value="newsletter"> Підписатися на розсилку</label>
+                    <label><input type="checkbox" name="option2" value="terms" required> Я погоджуюсь з умовами</label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">Коментарі (textarea):</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </div>
+                
+                <button type="reset" class="reset-button">Скинути Форму</button>
+            </form>
+        </section>
+
+        <section class="form-section js-integration">
+            <h2>3. JavaScript Інтеграція: Простий Калькулятор Суми</h2>
+            <p>Цей приклад бере значення з двох полів вводу та обробляє їх за допомогою функції JavaScript.</p>
+
+            <form id="calculator-form" class="calculator-form">
+                <div class="form-group">
+                    <label for="number1">Число 1:</label>
+                    <input type="number" id="number1" value="10" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="number2">Число 2:</label>
+                    <input type="number" id="number2" value="20" required>
+                </div>
+                
+                <button type="button" class="calc-button" onclick="calculateSum()">Обчислити Суму (JS)</button>
+            </form>
+
+            <div class="result-box">
+                <p>Результат:</p>
+                <p id="result-output">Очікується обчислення...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Демонстрація Форм</p>
+    </footer>
+
+    <script>
+        function calculateSum() {
+            
+            const num1Input = document.getElementById('number1');
+            const num2Input = document.getElementById('number2');
+            const outputElement = document.getElementById('result-output');
+        
+            const num1 = parseFloat(num1Input.value) || 0;
+            const num2 = parseFloat(num2Input.value) || 0;
+        
+            const sum = num1 + num2;
+
+            outputElement.textContent = `Сума: ${sum}`;
+            outputElement.style.color = '#c0392b';
+        }
+    </script>
+</body>
+</html>
